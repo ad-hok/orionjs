@@ -35,7 +35,7 @@ export default async function ({restart, options}) {
     detached: false
   })
 
-  await writeFile('.orion/process', appProcess.pid)
+  await writeFile('.orion/process', `${appProcess.pid}`)
 
   appProcess.on('exit', function (code, signal) {
     if (!code || code === 143 || code === 0 || signal === 'SIGTERM' || signal === 'SIGINT') {
