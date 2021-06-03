@@ -1,4 +1,5 @@
-import '@babel/polyfill'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 import './Errors/handleErrors'
 import connect from './database/connect'
 import disconnect from './database/disconnect'
